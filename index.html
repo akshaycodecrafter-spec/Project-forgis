@@ -1,0 +1,391 @@
+﻿<!doctype html>
+<!-- FORGIS - Strength Club | single-file build: HTML + CSS + JS in one document. No dependencies, works offline. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FORGIS — Strength Club, Dubai · Train Like You Mean It</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="description" content="FORGIS is a coach-led strength &amp; conditioning club in Al Quoz, Dubai. Precise programming, capped class ratios, measurable results. Book a free trial session.">
+  <meta property="og:title" content="FORGIS — Strength Club, Dubai">
+  <meta property="og:description" content="Coach-led strength training, engineered like good software. Precise programming, capped ratios, quarterly benchmarks. Book a free trial.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://forgisstrength.club/">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#fdfcfc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+
+  <script>
+    /* set theme + js flag before first paint */
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try { if (localStorage.getItem('forge-theme') === 'dark') d.setAttribute('data-theme', 'dark'); } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================================ -->
+  <!-- [PRELOADER]                                  -->
+  <!-- ============================================ -->
+  <div id="preloader" aria-hidden="true">
+    <p class="pre-line"><span id="preText"></span><span class="caret"></span></p>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- [NAV]                                        -->
+  <!-- ============================================ -->
+  <header id="site-nav">
+    <div class="nav-inner container">
+      <a class="logo" href="#top" aria-label="FORGIS — back to top">FORGIS<span class="logo-caret" aria-hidden="true">_</span></a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#programs">Programs</a>
+        <a class="nav-link" href="#coaches">Coaches</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeBtn" class="theme-btn" type="button" aria-pressed="false">[ DARK ]</button>
+        <a class="btn btn--sm btn--primary nav-cta" href="#contact">[ Free Trial ]</a>
+        <button id="menuBtn" class="theme-btn menu-btn" type="button" aria-expanded="false" aria-controls="mobileMenu">[ MENU ]</button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu">
+      <a class="mobile-link" href="#about">About</a>
+      <a class="mobile-link" href="#programs">Programs</a>
+      <a class="mobile-link" href="#coaches">Coaches</a>
+      <a class="mobile-link" href="#pricing">Pricing</a>
+      <a class="mobile-link" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================ -->
+    <!-- [HERO]                                       -->
+    <!-- ============================================ -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-status"><span class="status-dot" aria-hidden="true"></span>Now enrolling — 3 spots left this week</p>
+          <h1 class="hero-title">TRAIN LIKE YOU MEAN IT.</h1>
+          <p class="hero-sub">A coach-led strength club in Al&nbsp;Quoz, Dubai — engineered like good software. Precise programming, capped class sizes, progress you can graph.</p>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="#contact">[ Book a Free Trial ]</a>
+            <a class="btn" href="#programs">[ Explore Programs ]</a>
+          </div>
+          <p class="hero-meta">Al Quoz · Dubai — est. 2015 · open Mon–Sat 05:00–23:00</p>
+        </div>
+
+        <div class="hero-panel">
+          <div class="terminal" id="terminal" aria-hidden="true">
+            <div class="term-bar">
+              <div class="term-dots"><span></span><span></span><span></span></div>
+              <span class="term-title">coach@forgis: ~/schedule</span>
+            </div>
+            <div class="term-body">
+              <p class="term-line"><span class="prompt">$ </span><span id="termCmd">forgis book --trial</span><span class="caret" id="termCaret"></span></p>
+              <p class="term-line term-out">&raquo; checking schedule ......... ok</p>
+              <p class="term-line term-out">&raquo; slot held: tue 06:30 · rack 04</p>
+              <p class="term-line term-out">&raquo; confirmation sent. see you there.</p>
+              <p class="term-line term-final"><span class="prompt">$ </span><span class="caret"></span></p>
+            </div>
+          </div>
+          <p class="sr-only">Demo: booking a free trial reserves a Tuesday 06:30 slot on rack four with coach Dana.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- [ABOUT]                                      -->
+    <!-- ============================================ -->
+    <section class="section" id="about">
+      <div class="container container--narrow">
+        <div class="sec-head" data-reveal>
+          <h2 class="sec-label"><span class="mark">//</span> 01 / The Club</h2>
+          <span class="sec-note">$ man forgis</span>
+        </div>
+        <p class="lead" data-reveal>FORGIS opened in 2015 as six racks in an Al&nbsp;Quoz warehouse. The premise hasn't changed since: every session programmed, coached, and logged — reviewed against hard numbers each quarter. We're not louder than other gyms. We're just harder to outgrow.</p>
+        <ul class="principles" data-reveal-group>
+          <li><span class="marker" aria-hidden="true">[+]</span>Programming over vibes — every block written, logged, and reviewed.</li>
+          <li><span class="marker" aria-hidden="true">[+]</span>Coaching ratios capped at 1:8, enforced by the booking system.</li>
+          <li><span class="marker" aria-hidden="true">[+]</span>Quarterly benchmarks — strength, conditioning, body comp. On paper.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- [PROGRAMS]                                   -->
+    <!-- ============================================ -->
+    <section class="section" id="programs">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <h2 class="sec-label"><span class="mark">//</span> 02 / Programs</h2>
+          <span class="sec-note">ls ~/programs</span>
+        </div>
+        <div class="grid grid--programs" data-reveal-group>
+          <article class="card program-card">
+            <div class="card-top"><span class="card-idx">[01]</span><span class="card-meta">60 min</span></div>
+            <h3 class="card-title">Strength</h3>
+            <p class="card-desc">Barbell-first programming. Squat, press, pull — waved, logged, tested quarterly.</p>
+          </article>
+          <article class="card program-card">
+            <div class="card-top"><span class="card-idx">[02]</span><span class="card-meta">45 min</span></div>
+            <h3 class="card-title">Conditioning</h3>
+            <p class="card-desc">Sled, rower, airbike. Intervals dosed like medicine: hard, brief, tracked.</p>
+          </article>
+          <article class="card program-card">
+            <div class="card-top"><span class="card-idx">[03]</span><span class="card-meta">cap 8</span></div>
+            <h3 class="card-title">Small Group</h3>
+            <p class="card-desc">Full coaching attention with the push of a room that shows up. Never more than eight.</p>
+          </article>
+          <article class="card program-card">
+            <div class="card-top"><span class="card-idx">[04]</span><span class="card-meta">1:1</span></div>
+            <h3 class="card-title">Personal Training</h3>
+            <p class="card-desc">One coach, one plan — built around your calendar, your injuries, your goals.</p>
+          </article>
+          <article class="card program-card">
+            <div class="card-top"><span class="card-idx">[05]</span><span class="card-meta">45 min</span></div>
+            <h3 class="card-title">Mobility &amp; Recovery</h3>
+            <p class="card-desc">Positioning work, loaded stretching, breath. The session that makes the rest possible.</p>
+          </article>
+          <article class="card program-card">
+            <div class="card-top"><span class="card-idx">[06]</span><span class="card-meta">monthly</span></div>
+            <h3 class="card-title">Nutrition</h3>
+            <p class="card-desc">Habits-first coaching with monthly recalibration. No meal-plan PDFs. No crash math.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- [TRAINERS]                                   -->
+    <!-- ============================================ -->
+    <section class="section" id="coaches">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <h2 class="sec-label"><span class="mark">//</span> 03 / Coaches</h2>
+          <span class="sec-note">cat staff.json</span>
+        </div>
+        <div class="grid grid--coaches" data-reveal-group>
+          <article class="card coach-card">
+            <div class="portrait" aria-hidden="true"><span class="initials">DA</span><span class="portrait-tag">img: coach_dana.raw</span></div>
+            <h3 class="coach-name">Dana Al-Madani</h3>
+            <p class="coach-role">Head Coach · Powerlifting</p>
+            <p class="coach-bio">Former national-level lifter. Eleven years under the bar, nine coaching. Runs the strength curriculum.</p>
+          </article>
+          <article class="card coach-card">
+            <div class="portrait" aria-hidden="true"><span class="initials">MW</span><span class="portrait-tag">img: coach_marcus.raw</span></div>
+            <h3 class="coach-name">Marcus Webb</h3>
+            <p class="coach-role">Conditioning Lead</p>
+            <p class="coach-bio">Ex-rower. Four thousand interval sessions programmed, and counting.</p>
+          </article>
+          <article class="card coach-card">
+            <div class="portrait" aria-hidden="true"><span class="initials">PN</span><span class="portrait-tag">img: coach_priya.raw</span></div>
+            <h3 class="coach-name">Priya Nair</h3>
+            <p class="coach-role">Mobility &amp; Rehab</p>
+            <p class="coach-bio">Physio background. Rebuilds shoulders, hips, and confidence — in that order.</p>
+          </article>
+          <article class="card coach-card">
+            <div class="portrait" aria-hidden="true"><span class="initials">TK</span><span class="portrait-tag">img: coach_tomasz.raw</span></div>
+            <h3 class="coach-name">Tomasz Kowalski</h3>
+            <p class="coach-role">Personal Training</p>
+            <p class="coach-bio">Specializes in impossible schedules. Your program adapts to your calendar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- [STATS]                                      -->
+    <!-- ============================================ -->
+    <section class="section" id="stats">
+      <div class="container container--narrow">
+        <div class="sec-head" data-reveal>
+          <h2 class="sec-label"><span class="mark">//</span> 04 / By the Numbers</h2>
+          <span class="sec-note">tail -f results.log</span>
+        </div>
+        <div class="stat-table" data-reveal-group>
+          <div class="stat-row">
+            <span class="kv-key">Members trained since 2015</span>
+            <span class="stat-val" data-count="2400" data-suffix="+">2,400+</span>
+          </div>
+          <div class="stat-row">
+            <span class="kv-key">Years in operation</span>
+            <span class="stat-val" data-count="11" data-suffix="">11</span>
+          </div>
+          <div class="stat-row">
+            <span class="kv-key">Classes every week</span>
+            <span class="stat-val" data-count="68" data-suffix="">68</span>
+          </div>
+          <div class="stat-row">
+            <span class="kv-key">Quarterly goals hit</span>
+            <span class="stat-val" data-count="94" data-suffix="%">94%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- [TESTIMONIALS]                               -->
+    <!-- ============================================ -->
+    <section class="section" id="testimonials">
+      <div class="container container--narrow">
+        <div class="sec-head" data-reveal>
+          <h2 class="sec-label"><span class="mark">//</span> 05 / Field Reports</h2>
+          <span class="sec-note">grep praise inbox.md</span>
+        </div>
+        <figure class="quote" data-reveal>
+          <blockquote class="quote-body">I've been a member of five gyms in Dubai. FORGIS is the first one where anyone noticed I'd missed a week.</blockquote>
+          <figcaption class="quote-cite"><cite>Sara M.</cite> — member since 2021 · deadlift 60 &rarr; 115 kg</figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <blockquote class="quote-body">The programming is boring in the best possible way. Show up, follow the log, watch the numbers move.</blockquote>
+          <figcaption class="quote-cite"><cite>Omar K.</cite> — member since 2019 · first strict press-up at 42</figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <blockquote class="quote-body">Two coaches corrected my squat in my very first session. Nobody had ever watched me that closely.</blockquote>
+          <figcaption class="quote-cite"><cite>Jenny T.</cite> — member since 2023 · back under the bar post-injury</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- [PRICING]                                    -->
+    <!-- ============================================ -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <h2 class="sec-label"><span class="mark">//</span> 06 / Membership</h2>
+          <span class="sec-note">./membership --list</span>
+        </div>
+        <div class="grid grid--tiers" data-reveal-group>
+          <article class="card tier">
+            <h3 class="tier-name">Foundation</h3>
+            <p class="tier-price"><span class="price-num">349</span><span class="price-per">AED / mo</span></p>
+            <ul class="features">
+              <li>Unlimited group classes</li>
+              <li>Open gym, off-peak hours</li>
+              <li>Quarterly benchmark testing</li>
+              <li>Training-log app included</li>
+            </ul>
+            <a class="btn tier-btn" href="#contact">[ Start Foundation ]</a>
+          </article>
+
+          <article class="card tier tier--featured">
+            <span class="rec-badge">[ Recommended ]</span>
+            <h3 class="tier-name">Performance</h3>
+            <p class="tier-price"><span class="price-num">549</span><span class="price-per">AED / mo</span></p>
+            <ul class="features">
+              <li>Everything in Foundation</li>
+              <li>24/7 door-code access</li>
+              <li>Monthly program review with a coach</li>
+              <li>2 guest passes / month</li>
+            </ul>
+            <a class="btn btn--primary tier-btn" href="#contact">[ Start Performance ]</a>
+          </article>
+
+          <article class="card tier">
+            <h3 class="tier-name">P1 Coaching</h3>
+            <p class="tier-price"><span class="price-num">1,450</span><span class="price-per">AED / mo</span></p>
+            <ul class="features">
+              <li>Dedicated coach, 1:1</li>
+              <li>Weekly check-ins &amp; adjustments</li>
+              <li>Nutrition coaching included</li>
+              <li>Priority booking window</li>
+            </ul>
+            <a class="btn tier-btn" href="#contact">[ Apply for P1 ]</a>
+          </article>
+        </div>
+        <p class="pricing-note" data-reveal>All plans month-to-month. No joining fee, no lock-in, cancel anytime before your billing date.</p>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- [CONTACT / CTA]                              -->
+    <!-- ============================================ -->
+    <section class="section" id="contact">
+      <div class="container container--narrow">
+        <div class="sec-head" data-reveal>
+          <h2 class="sec-label"><span class="mark">//</span> 07 / Start Here</h2>
+          <span class="sec-note">ping forgis --fast</span>
+        </div>
+
+        <div class="contact-grid" data-reveal-group>
+          <div class="kv-table">
+            <div class="kv-row"><span class="kv-key">Address</span><span class="kv-val">Warehouse 12, Al Quoz Ind. Area 3<br>Dubai, UAE</span></div>
+            <div class="kv-row"><span class="kv-key">Hours</span><span class="kv-val">Mon–Sat 05:00–23:00<br>Sun 07:00–20:00</span></div>
+            <div class="kv-row"><span class="kv-key">Phone</span><span class="kv-val"><a class="inline-link" href="tel:+971555550199">+971 55 555 0199</a></span></div>
+            <div class="kv-row"><span class="kv-key">Email</span><span class="kv-val"><a class="inline-link" href="mailto:train@forgisstrength.club">train@forgisstrength.club</a></span></div>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn btn--primary btn--block" href="mailto:train@forgisstrength.club?subject=Free%20trial%20booking">[ Book a Free Trial ]</a>
+            <a class="btn btn--block" href="https://wa.me/9715555550199" target="_blank" rel="noopener">
+              <svg class="wa-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.14-1.35A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.1 14.86l-.3-.17-3 .79.8-2.94-.18-.31A8 8 0 0 1 12 4Zm-3.1 4.2c-.2 0-.5.07-.72.34-.24.27-.87.85-.87 2.07 0 1.22.89 2.4 1 2.56.13.17 1.75 2.79 4.28 3.8 2.1.83 2.53.67 2.98.62.46-.04 1.5-.61 1.71-1.2.2-.6.2-1.1.14-1.2-.06-.11-.23-.17-.48-.3s-1.47-.73-1.7-.81c-.23-.09-.4-.13-.56.12-.17.25-.64.8-.78.97-.15.17-.29.19-.53.06a6.6 6.6 0 0 1-1.96-1.21 7.3 7.3 0 0 1-1.35-1.68c-.14-.25-.02-.39.1-.51.12-.12.25-.3.38-.46.12-.15.17-.25.25-.42.09-.17.05-.31-.01-.44-.06-.12-.55-1.36-.77-1.85-.19-.43-.38-.4-.53-.41l-.45-.02Z"/></svg>
+              Chat on WhatsApp
+            </a>
+            <p class="contact-note">A trial is a full session with a real class. No sales pitch, no tour-and-goodbye.</p>
+          </div>
+        </div>
+
+        <p class="closer" id="closer" data-reveal><span class="prompt">$ </span><span id="closerCmd">forgis join --now</span><span class="caret"></span></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================ -->
+  <!-- [FOOTER]                                     -->
+  <!-- ============================================ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="man-row" aria-hidden="true">
+        <span>FORGIS(1)</span>
+        <span>Strength Club Handbook</span>
+        <span>Rev 2026-08</span>
+      </div>
+
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="logo" href="#top">FORGIS<span class="logo-caret" aria-hidden="true">_</span></a>
+          <p>A strength club engineered like good software. Six racks grew up; the premise didn't.</p>
+        </div>
+        <nav class="foot-nav" aria-label="Footer">
+          <h4 class="foot-head">Index</h4>
+          <a href="#about">About</a>
+          <a href="#programs">Programs</a>
+          <a href="#coaches">Coaches</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="foot-contact">
+          <h4 class="foot-head">Contact</h4>
+          <p>Warehouse 12, Al Quoz Ind. Area 3, Dubai</p>
+          <p><a class="inline-link" href="tel:+971555550199">+971 55 555 0199</a></p>
+          <p><a class="inline-link" href="mailto:train@forgisstrength.club">train@forgisstrength.club</a></p>
+        </div>
+      </div>
+
+      <div class="foot-base">
+        <span>&copy; 2026 Forgis Strength Club LLC · All rights reserved</span>
+        <span class="foot-cred">Built like documentation. Maintained like a tool.</span>
+        <a class="inline-link" href="#top">[ Back to top ]</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
