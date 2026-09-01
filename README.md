@@ -2,7 +2,7 @@
 
 A landing page concept for a coach-led strength and conditioning club in Al Quoz, Dubai — built around the idea that good training, like good software, comes down to precise programming.
 
-🔗 **Live:** [REPLACE_WITH_ACTUAL_URL]
+🔗 **Live:** https://project-forgis.akshaycodecrafter.workers.dev/
 
 ## Preview
 
